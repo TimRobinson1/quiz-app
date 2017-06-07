@@ -11,9 +11,10 @@ import Welcome from './src/components/welcome'
 export default class QuizApp extends Component {
   render() {
     return (
-      <View style={{flex: 1}}>
-        <Text className='texttag'>Hello World!</Text>
-      </View>
+      <Welcome />
+      // <View style={{flex: 1}}>
+      //   <Text className='texttag'>Hello World!</Text>
+      // </View>
     );
   }
 }
