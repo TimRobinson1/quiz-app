@@ -1,25 +1,28 @@
 import React, { Component } from 'react';
-import { AppRegistry, Text, View } from 'react-native';
+import { AppRegistry, Text, View, Image } from 'react-native';
 import Button from "react-native-button";
+import ButtonComponent, { CircleButton, RoundButton, RectangleButton } from 'react-native-button-component'
+// import styles from '../styles';
 
 const Welcome = () => {
     return (
+      <Image source={require('../welcome.jpg')} style={{flex: 1, height:300, width:null}}>
       <View style={{flex: 1}}>
-        <View style={{flex: 1, justifyContent: 'flex-end', backgroundColor: '#660066', borderBottomWidth: 0.5, borderColor: '#d6d7da', opacity: 0.8}}>
+        <View style={{flex: 1, justifyContent: 'flex-end', backgroundColor: 'rgba(102,0,102,0.9)'}}>
           <Text style={{color: 'white', fontSize: 30, alignSelf: 'center'}}>ARE YOU DRUNK?</Text>
         </View>
-        <View style={{flex: 4, padding:10, backgroundColor: '#660066', opacity: 0.8}}>
-          <Text style={{color: 'white', fontSize: 30, alignSelf: 'center', marginBottom: 40}}>
-            Welcome to the best drunk quiz app in the world. Are you ready?
+        <View style={{flex: 4, backgroundColor: 'rgba(102,0,102,0.5)', padding: 40, justifyContent: 'flex-end'}}>
+          <Text style={{color: 'white', fontSize: 35, alignSelf: 'center', marginBottom: 40, textAlign: 'center' }}>
+            Are you over 18?
           </Text>
-          <Button style={{color: '#660066', alignSelf: 'center', padding: 5, backgroundColor:'powderblue', borderWidth: 1, borderColor: '#000000', overflow: 'hidden', borderRadius: 15}}>
-            Begin
-          </Button>
         </View>
-        <View style={{flex: 4, backgroundColor: '#660066', opacity: 0.8}}>
-
+        <View style={{flex: 4, backgroundColor: 'rgba(102,0,102,0.5)', padding: 40}}>
+            <Button style={{color: '#660066', height:50, fontSize:40, backgroundColor:'white', borderWidth: 1, borderColor: '#000000', overflow: 'hidden', borderRadius: 15}}>
+              Yes
+            </Button>
         </View>
       </View>
+    </Image>
     );
   }
 
