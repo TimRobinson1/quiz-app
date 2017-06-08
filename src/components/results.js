@@ -4,13 +4,13 @@ import Button from "react-native-button";
 import styles from '../styles';
 
 function calculate(n) {
-  if (((n * 5) / 4) < 15) {
+  if (n < 15) {
     return "You're good to go!";
-  } else if (((n * 5) / 4) < 35) {
+  } else if (n < 35) {
     return "You're a little drunk, matey.";
   }
-    return "You're completely smashed.";
-  }
+  return "You're completely smashed.";
+}
 
 class Results extends React.Component {
   static navigationOptions = {
