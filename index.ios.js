@@ -2,8 +2,10 @@ import React, { Component } from 'react';
 import { AppRegistry, Text, View } from 'react-native';
 import Welcome from './src/components/welcome'
 import { StackNavigator } from 'react-navigation';
-import QuizQuestions from './src/components/quizquestions';
+import QuizQuestion1 from './src/components/quizquestion1';
+import QuizQuestion2 from './src/components/quizquestion2';
 import Results from './src/components/results';
+
 // export default class QuizApp extends Component {
 //   render() {
 //     return (
@@ -17,7 +19,8 @@ import Results from './src/components/results';
 
 const QuizApp = StackNavigator({
   Home: { screen: Welcome },
-  Quiz: { screen: QuizQuestions },
+  QuizQuestion1: { screen: QuizQuestion1 },
+  QuizQuestion2: { screen: QuizQuestion2 },
   Results: { screen: Results },
 });
 

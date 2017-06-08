@@ -19,7 +19,7 @@ class Welcome extends React.Component {
             </Text>
           </View>
           <View style={styles.buttonContainer}>
-              <Button onPress={() => navigate('Quiz', { score: score })} style={styles.button}>
+              <Button onPress={() => navigate('QuizQuestion1', { score: score })} style={styles.button}>
                 Yes
               </Button>
           </View>
