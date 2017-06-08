@@ -4,11 +4,11 @@ import Button from "react-native-button";
 import styles from '../styles';
 
 function calculate(n) {
-  if (((n * 5) / 2) < 15) {
+  if (((n * 5) / 3) < 15) {
     return "You're good to go!";
-  } else if (((n * 5) / 2) < 35) {
+  } else if (((n * 5) / 3) < 35) {
     return "You're a little drunk, matey.";
-  } 
+  }
     return "You're completely smashed.";
   }
 

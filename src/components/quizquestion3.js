@@ -3,7 +3,7 @@ import { AppRegistry, Text, View, Image, Linking } from 'react-native';
 import Button from "react-native-button";
 import styles from '../styles';
 
-class QuizQuestion2 extends React.Component {
+class QuizQuestion3 extends React.Component {
   static navigationOptions = {
     title: 'Project Guinness'
   };
@@ -15,18 +15,18 @@ class QuizQuestion2 extends React.Component {
         <View style={styles.background}>
           <View style={styles.questionContainer}>
             <Text style={styles.question}>
-              What is 12 x 12 ?
+              How many of units of alcohol have you drunk?
             </Text>
           </View>
           <View style={styles.buttonContainer}>
-              <Button onPress={() => navigate('QuizQuestion3', { score: score + 5 })} style={styles.quizButton}>
-                136
+              <Button onPress={() => navigate('Results', { score: score + 0 })} style={styles.quizButton}>
+                Less than 2!
               </Button>
-              <Button onPress={() => navigate('QuizQuestion3', { score: score + 10 })} style={styles.quizButton}>
-                1212
+              <Button onPress={() => navigate('Results', { score: score + 5 })} style={styles.quizButton}>
+                Around 4 or 5?
               </Button>
-              <Button onPress={() => navigate('QuizQuestion3', { score: score + 0 })} style={styles.quizButton}>
-                144
+              <Button onPress={() => navigate('Results', { score: score + 10 })} style={styles.quizButton}>
+                Errr....
               </Button>
           </View>
         </View>
@@ -35,4 +35,4 @@ class QuizQuestion2 extends React.Component {
   }
 }
 // Make the component available to other parts of the app
-export default QuizQuestion2;
+export default QuizQuestion3;

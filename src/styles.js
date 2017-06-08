@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
   "question":{
     color: 'white',
     fontWeight: 'bold',
-    fontSize: 60,
+    fontSize: 40,
     alignSelf: 'center',
     marginBottom: 40,
     textAlign: 'center'
