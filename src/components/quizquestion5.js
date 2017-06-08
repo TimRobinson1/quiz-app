@@ -23,7 +23,7 @@ class QuizQuestion5 extends React.Component {
                 No, not at all!
               </Button>
               <Button onPress={() => navigate('Results', { score: score + 10 })} style={styles.quizButton}>
-                That is an excellent idea!
+                YESSSSS!!!
               </Button>
               <Button onPress={() => navigate('Results', { score: score + 5 })} style={styles.quizButton}>
                 I don't have their number.
