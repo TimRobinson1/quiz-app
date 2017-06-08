@@ -1,11 +1,8 @@
-import React from 'react';
-import {
-  AppRegistry
-} from 'react-native';
+import React, { Component } from 'react';
+import { AppRegistry, Text, View } from 'react-native';
+import Welcome from './src/components/welcome'
 import { StackNavigator } from 'react-navigation';
-import Welcome from './src/components/welcome';
 import QuizQuestions from './src/components/quizquestions';
-
 // export default class QuizApp extends Component {
 //   render() {
 //     return (
