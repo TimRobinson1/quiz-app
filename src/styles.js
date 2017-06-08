@@ -45,6 +45,14 @@ const styles = StyleSheet.create({
     marginBottom: 40,
     textAlign: 'center'
   },
+  "result":{
+    color: 'white',
+    fontWeight: 'bold',
+    fontSize: 40,
+    alignSelf: 'center',
+    marginBottom: 40,
+    textAlign: 'center'
+  },
   "quizButton":{
     color: '#FFFFFF',
     margin:10,

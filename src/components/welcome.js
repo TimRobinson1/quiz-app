@@ -4,10 +4,11 @@ import Button from "react-native-button";
 import styles from '../styles';
 
 class Welcome extends React.Component {
-  static navigationOptions = {
+  static navigationOptions = ({ navigation, screenProps }) => ({
     title: 'Project Guinness'
-  };
+  });
   render() {
+    const score = 0
     const { navigate } = this.props.navigation;
     return (
       <Image source={require('../welcome.jpg')} style={{flex: 1, height:300, width:null}}>
@@ -18,7 +19,7 @@ class Welcome extends React.Component {
             </Text>
           </View>
           <View style={styles.buttonContainer}>
-              <Button onPress={() => navigate('Quiz')} style={styles.button}>
+              <Button onPress={() => navigate('Quiz', { score: score })} style={styles.button}>
                 Yes
               </Button>
           </View>
