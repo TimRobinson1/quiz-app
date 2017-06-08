@@ -57,12 +57,12 @@ const styles = StyleSheet.create({
     color: '#FFFFFF',
     margin:10,
     height:50,
-    fontSize:40,
+    fontSize:20,
     backgroundColor:'purple',
     borderWidth: 1,
     borderColor: '#FFFFFF',
     overflow: 'hidden',
-    borderRadius: 15
+    borderRadius: 15,
   },
   "drinkaware":{
     backgroundColor:'rgba(102,0,102,0.5)'
