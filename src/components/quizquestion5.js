@@ -26,7 +26,7 @@ class QuizQuestion5 extends React.Component {
                 YESSSSS!!!
               </Button>
               <Button onPress={() => navigate('Results', { score: score + 5 })} style={styles.quizButton}>
-                I don't have their number.
+                I have no exes!
               </Button>
           </View>
         </View>

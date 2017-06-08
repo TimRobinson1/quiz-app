@@ -9,8 +9,8 @@ function calculate(n) {
   } else if (n < 35) {
     return "You're a little drunk, matey.";
   }
-    return "You're completely smashed.";
-  }
+  return "You're completely smashed.";
+}
 
 class Results extends React.Component {
   static navigationOptions = {
