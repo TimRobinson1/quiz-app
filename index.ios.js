@@ -9,17 +9,6 @@ import QuizQuestion4 from './src/components/quizquestion4';
 import QuizQuestion5 from './src/components/quizquestion5';
 import Results from './src/components/results';
 
-// export default class QuizApp extends Component {
-//   render() {
-//     return (
-//       <View style={{flex: 1}}>
-//         <Text className='texttag'>Hello World!</Text>
-//       </View>
-//     );
-//   }
-// }
-
-
 const QuizApp = StackNavigator({
   Home: { screen: Welcome },
   QuizQuestion1: { screen: QuizQuestion1 },

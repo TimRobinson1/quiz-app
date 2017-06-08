@@ -18,7 +18,7 @@ class Results extends React.Component {
   };
   render() {
     const { navigate } = this.props.navigation;
-    const score = this.props.navigation.state.params.score
+    const score = this.props.navigation.state.params.score;
     return (
       <Image source={require('../quizbg.jpg')} style={{flex: 1, height:300, width:null}}>
         <View style={styles.background}>
