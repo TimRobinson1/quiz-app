@@ -3,7 +3,7 @@ import { AppRegistry, Text, View, Image, Linking } from 'react-native';
 import Button from "react-native-button";
 // import styles from '../styles';
 
-class Welcome extends React.Component {
+class QuizQuestions extends React.Component {
   static navigationOptions = {
     title: 'Are you Drunk?'
   };
@@ -17,11 +17,11 @@ class Welcome extends React.Component {
           </View>
           <View style={{flex: 4, padding: 40, justifyContent: 'flex-end'}}>
             <Text style={{color: 'white', fontSize: 35, alignSelf: 'center', marginBottom: 40, textAlign: 'center' }}>
-              Are you over 18?
+              You sir are drunk
             </Text>
           </View>
           <View style={{flex: 4, padding: 40}}>
-              <Button onPress={() => navigate('Quiz')} style={{color: '#660066', height:50, fontSize:40, backgroundColor:'white', borderWidth: 1, borderColor: '#000000', overflow: 'hidden', borderRadius: 15}}>
+              <Button onPress={() => navigate('Home')} style={{color: '#660066', height:50, fontSize:40, backgroundColor:'white', borderWidth: 1, borderColor: '#000000', overflow: 'hidden', borderRadius: 15}}>
                 Yes
               </Button>
           </View>
@@ -37,4 +37,5 @@ class Welcome extends React.Component {
   }
 }
 
-export default Welcome;
+// Make the component available to other parts of the app
+export default QuizQuestions;
