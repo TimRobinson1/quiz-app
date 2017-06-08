@@ -19,13 +19,13 @@ class QuizQuestion3 extends React.Component {
             </Text>
           </View>
           <View style={styles.buttonContainer}>
-              <Button onPress={() => navigate('Results', { score: score + 0 })} style={styles.quizButton}>
+              <Button onPress={() => navigate('QuizQuestion4', { score: score + 0 })} style={styles.quizButton}>
                 Less than 2!
               </Button>
-              <Button onPress={() => navigate('Results', { score: score + 5 })} style={styles.quizButton}>
+              <Button onPress={() => navigate('QuizQuestion4', { score: score + 5 })} style={styles.quizButton}>
                 Around 4 or 5?
               </Button>
-              <Button onPress={() => navigate('Results', { score: score + 10 })} style={styles.quizButton}>
+              <Button onPress={() => navigate('QuizQuestion4', { score: score + 10 })} style={styles.quizButton}>
                 Errr....
               </Button>
           </View>

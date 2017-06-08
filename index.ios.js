@@ -5,6 +5,7 @@ import { StackNavigator } from 'react-navigation';
 import QuizQuestion1 from './src/components/quizquestion1';
 import QuizQuestion2 from './src/components/quizquestion2';
 import QuizQuestion3 from './src/components/quizquestion3';
+import QuizQuestion4 from './src/components/quizquestion4';
 import Results from './src/components/results';
 
 // export default class QuizApp extends Component {
@@ -23,6 +24,7 @@ const QuizApp = StackNavigator({
   QuizQuestion1: { screen: QuizQuestion1 },
   QuizQuestion2: { screen: QuizQuestion2 },
   QuizQuestion3: { screen: QuizQuestion3 },
+  QuizQuestion4: { screen: QuizQuestion4 },
   Results: { screen: Results },
 });
 
