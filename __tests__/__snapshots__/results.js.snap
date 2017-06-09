@@ -6,7 +6,7 @@ exports[`renders correctly 1`] = `
   style={
     Object {
       "flex": 1,
-      "height": 300,
+      "height": 50,
       "width": null,
     }
   }
@@ -47,6 +47,7 @@ exports[`renders correctly 1`] = `
         You're good to go!
       </Text>
     </View>
+    <View />
     <View
       style={
         Object {
