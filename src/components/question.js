@@ -19,7 +19,7 @@ class Question extends React.Component {
       <Image source={require('../quizbg.jpg')} style={{flex: 1, height:300, width:null}}>
         <View style={styles.background}>
           <View style={styles.questionContainer}>
-            <Text style={styles.question}>
+            <Text className='question' style={styles.question}>
               { round.question }
             </Text>
           </View>
