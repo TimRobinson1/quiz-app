@@ -9,8 +9,8 @@ class Question extends React.Component {
     title: 'Project Guinness'
   };
   render() {
-    const { navigate } = this.props.navigation;
     const params = this.props.navigation.state.params;
+    const nav = this.props.navigation;
     const score = params.score;
     const round = params.round;
     const quiz = params.quiz;
@@ -26,7 +26,7 @@ class Question extends React.Component {
           <View style={styles.buttonContainer}>
               { shuffle(round.answers).map(function(choice) {
                 return (
-                  <Button onPress={() => navigate(nextPage, { score: score + choice[1], round: shuffle(quiz).pop(), quiz: quiz })} key={choice} style={styles.quizButton}>
+                  <Button className='button' onPress={() => nav.navigate(nextPage, { score: score + choice[1], round: shuffle(quiz).pop(), quiz: quiz })} key={choice} style={styles.quizButton}>
                     { choice[0] }
                   </Button>
                 )})
