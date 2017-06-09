@@ -2,32 +2,35 @@ import React, { Component } from 'react';
 import { AppRegistry, Text, View, Image, Linking } from 'react-native';
 import Button from "react-native-button";
 import styles from '../styles';
+import { shuffle } from '../helpers/functions';
 
-class QuizQuestion2 extends React.Component {
+class Question extends React.Component {
   static navigationOptions = {
     title: 'Project Guinness'
   };
   render() {
     const { navigate } = this.props.navigation;
-    const score = this.props.navigation.state.params.score
+    const params = this.props.navigation.state.params;
+    const score = params.score;
+    const round = params.round;
+    const quiz = params.quiz;
+    const nextPage = quiz.length === 0 ? 'Results' : 'Question';
     return (
       <Image source={require('../quizbg.jpg')} style={{flex: 1, height:300, width:null}}>
         <View style={styles.background}>
           <View style={styles.questionContainer}>
             <Text style={styles.question}>
-              What is 12 x 12 ?
+              { round.question }
             </Text>
           </View>
           <View style={styles.buttonContainer}>
-              <Button onPress={() => navigate('QuizQuestion3', { score: score + 5 })} style={styles.quizButton}>
-                136
-              </Button>
-              <Button onPress={() => navigate('QuizQuestion3', { score: score + 10 })} style={styles.quizButton}>
-                1212
-              </Button>
-              <Button onPress={() => navigate('QuizQuestion3', { score: score + 0 })} style={styles.quizButton}>
-                144
-              </Button>
+              { shuffle(round.answers).map(function(choice) {
+                return (
+                  <Button onPress={() => navigate(nextPage, { score: score + choice[1], round: shuffle(quiz).pop(), quiz: quiz })} key={choice} style={styles.quizButton}>
+                    { choice[0] }
+                  </Button>
+                )})
+              }
           </View>
         </View>
       </Image>
@@ -35,4 +38,4 @@ class QuizQuestion2 extends React.Component {
   }
 }
 // Make the component available to other parts of the app
-export default QuizQuestion2;
+export default Question;

@@ -2,12 +2,15 @@ import React, { Component } from 'react';
 import { AppRegistry, Text, View, Image, Linking } from 'react-native';
 import Button from "react-native-button";
 import styles from '../styles';
+import { newQuiz, shuffle } from '../helpers/functions';
 
 class Welcome extends React.Component {
   static navigationOptions = ({ navigation, screenProps }) => ({
     title: 'Project Guinness'
   });
   render() {
+    const quiz = newQuiz();
+    const round = shuffle(quiz).pop()
     const score = 0
     const { navigate } = this.props.navigation;
     return (
@@ -19,7 +22,7 @@ class Welcome extends React.Component {
             </Text>
           </View>
           <View style={styles.buttonContainer}>
-              <Button onPress={() => navigate('QuizQuestion1', { score: score })} style={styles.button}>
+              <Button onPress={() => navigate('Question', { score: score, round: round, quiz: quiz })} style={styles.button}>
                 Yes
               </Button>
           </View>
