@@ -11,7 +11,8 @@ class Welcome extends React.Component {
   render() {
     const quiz = newQuiz();
     const round = shuffle(quiz).pop()
-    const score = 0
+    const roundNumber = 0;
+    const score = 0;
     return (
       <Image source={require('../welcome.jpg')} style={{flex: 1, height:300, width:null}}>
         <View style={styles.background}>
@@ -21,7 +22,10 @@ class Welcome extends React.Component {
             </Text>
           </View>
           <View style={styles.buttonContainer}>
-              <Button className='start' onPress={() => this.props.navigation.navigate('Question', { score: score, round: round, quiz: quiz })} style={styles.button}>
+              <Button
+                className='start'
+                onPress={() => this.props.navigation.navigate('Question', { score: score, round: round, roundNumber: roundNumber, quiz: quiz })}
+                style={styles.button}>
                 Yes
               </Button>
           </View>

@@ -13,8 +13,9 @@ class Question extends React.Component {
     const nav = this.props.navigation;
     const score = params.score;
     const round = params.round;
+    const roundNumber = params.roundNumber + 1;
     const quiz = params.quiz;
-    const nextPage = quiz.length === 0 ? 'Results' : 'Question';
+    const nextPage = roundNumber === 5 ? 'Results' : 'Question';
     return (
       <Image source={require('../quizbg.jpg')} style={{flex: 1, height:300, width:null}}>
         <View style={styles.background}>
@@ -26,7 +27,7 @@ class Question extends React.Component {
           <View style={styles.buttonContainer}>
               { shuffle(round.answers).map(function(choice) {
                 return (
-                  <Button className='button' onPress={() => nav.navigate(nextPage, { score: score + choice[1], round: shuffle(quiz).pop(), quiz: quiz })} key={choice} style={styles.quizButton}>
+                  <Button className='button' onPress={() => nav.navigate(nextPage, { score: score + choice[1], round: shuffle(quiz).pop(), roundNumber: roundNumber, quiz: quiz })} key={choice} style={styles.quizButton}>
                     { choice[0] }
                   </Button>
                 )})
