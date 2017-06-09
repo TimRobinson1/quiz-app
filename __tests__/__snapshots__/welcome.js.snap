@@ -1,0 +1,137 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<Image
+  source={1}
+  style={
+    Object {
+      "flex": 1,
+      "height": 300,
+      "width": null,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "rgba(102,0,102,0.5)",
+        "flex": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flex": 4,
+          "justifyContent": "flex-end",
+          "padding": 40,
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        className="header"
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "alignSelf": "center",
+            "color": "white",
+            "fontSize": 35,
+            "marginBottom": 40,
+            "textAlign": "center",
+          }
+        }
+      >
+        Are you over 18?
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "flex": 4,
+          "padding": 40,
+        }
+      }
+    >
+      <View
+        accessibilityComponentType="button"
+        accessibilityLabel={undefined}
+        accessibilityTraits="button"
+        accessible={true}
+        hitSlop={undefined}
+        isTVSelectable={true}
+        onLayout={undefined}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "opacity": 1,
+          }
+        }
+        testID={undefined}
+        tvParallaxProperties={undefined}
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#007aff",
+                "fontSize": 17,
+                "fontWeight": "500",
+                "textAlign": "center",
+              },
+              null,
+              Object {
+                "backgroundColor": "purple",
+                "borderColor": "#FFFFFF",
+                "borderRadius": 15,
+                "borderWidth": 1,
+                "color": "#FFFFFF",
+                "fontSize": 40,
+                "height": 50,
+                "overflow": "hidden",
+              },
+              null,
+            ]
+          }
+        >
+          Yes
+        </Text>
+      </View>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "backgroundColor": "rgba(102,0,102,0.5)",
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      className="link"
+      ellipsizeMode="tail"
+      onPress={[Function]}
+      style={
+        Object {
+          "color": "#538EED",
+          "fontSize": 20,
+          "textAlign": "center",
+          "textDecorationLine": "underline",
+        }
+      }
+    >
+      Drink Aware
+    </Text>
+  </View>
+</Image>
+`;
