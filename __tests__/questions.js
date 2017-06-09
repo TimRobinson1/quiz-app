@@ -9,7 +9,7 @@ const testQuestions = function(question, answers = [['Yes', 0]]) {
   return ({
     state: {
       params: {
-        score: 10,
+        score: 0,
         quiz: 'test',
         round: {
           question: question,
@@ -20,16 +20,13 @@ const testQuestions = function(question, answers = [['Yes', 0]]) {
   })
 }
 
-
 // Note: test renderer must be required after react-native.
 import renderer from 'react-test-renderer';
 
-// this.props.navigation.state.params.score
-
-// it("renders correctly", () => {
-//   const tree = renderer.create(<Question navigation={settestQuestions} />).toJSON();
-//   expect(tree).toMatchSnapshot();
-// });
+it("renders correctly", () => {
+  const tree = renderer.create(<Question navigation={testQuestions('Test')} />).toJSON();
+  expect(tree).toMatchSnapshot();
+});
 
 it("displays the supplied question", () => {
   const page = shallow(<Question navigation={testQuestions('Are you drunk?')} />);
@@ -55,6 +52,20 @@ it("can display three buttons", () => {
     } />
   );
   expect(page.find('.button').length).toBe(3);
+});
+
+it("carries through the right score with the answer", () => {
+  const page = shallow(
+    <Question navigation={testQuestions('Test')} />
+  );
+  expect(page.find('.button').node.key).toBe('Yes,0');
+});
+
+it("carries through custom scores with the matched answer", () => {
+  const page = shallow(
+    <Question navigation={testQuestions('Test', [['Great test', 37]])} />
+  );
+  expect(page.find('.button').node.key).toBe('Great test,37');
 });
 
 it("displays custom questions", () => {
