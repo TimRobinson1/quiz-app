@@ -24,20 +24,28 @@ export function shuffle(array) {
 }
 
 export function calculate(n) {
-  if (n < 15) {
+
+const quizLength = newQuiz().length;
+const weightedScore = (n * 5.0) / quizLength;
+
+  if (weightedScore < 15) {
     return "You're good to go!";
-  } else if (n < 25) {
-    return "You're mostly okay."
-  } else if (n < 35) {
+  } else if (weightedScore < 25) {
+    return "You're mostly okay.";
+  } else if (weightedScore < 35) {
     return "You're a little tipsy, matey.";
   }
   return "You're completely smashed.";
 }
 
 export function resultImage(n) {
-  if (n < 15) {
+
+  const quizLength = newQuiz().length;
+  const weightedScore = (n * 5.0) / quizLength;
+
+  if (weightedScore < 15) {
     return require('../allgood.jpg');
-  } else if (n < 35) {
+  } else if (weightedScore < 35) {
     return require("../tipsy.jpg");
   }
   return require("../drunk.jpg");
