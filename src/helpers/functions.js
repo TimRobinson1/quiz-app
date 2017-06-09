@@ -64,6 +64,30 @@ export function newQuiz() {
     {
       question: 'Do you want to text your ex right now?',
       answers: [['YESSSSS!!!', 10], ['No!', 0], ['No ex for me!', 5]]
+    },
+    {
+      question: 'What are your plans tomorrow?',
+      answers: [['Eat all the things!', 10], ['Sleep', 0], ["No idea", 5]]
+    },
+    {
+      question: 'What kind of food is the tastiest?',
+      answers: [['Greasy things', 10], ['Fresh food', 0], ["Chips", 5]]
+    },
+    {
+      question: 'How do you feel?',
+      answers: [['Pretty sick', 10], ['Fine', 0], ["I'm great!", 5]]
+    },
+    {
+      question: 'Who is the US President?',
+      answers: [['The what?', 10], ['Donald Trump', 0], ["An orange loony", 5]]
+    },
+    {
+      question: 'Pick a location',
+      answers: [['Nightclub', 10], ['Park', 0], ["Pub", 5]]
+    },
+    {
+      question: 'How many erors are their in this sentence?',
+      answers: [['2', 0], ['1', 5], ["None", 10]]
     }
   ])
 }
