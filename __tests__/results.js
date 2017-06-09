@@ -9,8 +9,6 @@ const testScore = function(n) {
 // Note: test renderer must be required after react-native.
 import renderer from 'react-test-renderer';
 
-// this.props.navigation.state.params.score
-
 it("renders correctly", () => {
   const tree = renderer.create(<Results navigation={testScore(0)} />).toJSON();
   expect(tree).toMatchSnapshot();

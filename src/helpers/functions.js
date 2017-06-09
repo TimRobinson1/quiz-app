@@ -25,7 +25,7 @@ export function shuffle(array) {
 
 export function calculate(n) {
 
-const quizLength = newQuiz().length;
+const quizLength = 5;
 const weightedScore = (n * 5.0) / quizLength;
 
   if (weightedScore < 15) {
@@ -40,7 +40,7 @@ const weightedScore = (n * 5.0) / quizLength;
 
 export function resultImage(n) {
 
-  const quizLength = newQuiz().length;
+  const quizLength = 5;
   const weightedScore = (n * 5.0) / quizLength;
 
   if (weightedScore < 15) {
