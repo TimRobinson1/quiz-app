@@ -34,6 +34,15 @@ export function calculate(n) {
   return "You're completely smashed.";
 }
 
+export function resultImage(n) {
+  if (n < 15) {
+    return require('../allgood.jpg');
+  } else if (n < 35) {
+    return require("../tipsy.jpg");
+  }
+  return require("../drunk.jpg");
+}
+
 export function newQuiz() {
   return ([
     {
@@ -45,7 +54,7 @@ export function newQuiz() {
       answers: [['1212', 10], ['144', 0], ['136', 5]]
     },
     {
-      question: 'How many of units of alcohol have you drunk?',
+      question: 'How many units of alcohol have you drunk?',
       answers: [['Err...', 10], ['Less than 2!', 0], ['Around 4 or 5.', 5]]
     },
     {
