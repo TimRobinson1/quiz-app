@@ -3,7 +3,7 @@ import React from 'react';
 import Results from '../src/components/results.js';
 import { shallow } from 'enzyme';
 const testScore = function(n) {
-  return { state: { params: {score: n} } };
+  return { state: { params: { score: n } } };
 }
 
 // Note: test renderer must be required after react-native.
@@ -14,7 +14,7 @@ it("renders correctly", () => {
   expect(tree).toMatchSnapshot();
 });
 
-it("is a test", () => {
+it("displays restart button", () => {
   const page = shallow(<Results navigation={testScore(0)} />);
   expect(page.find('.button').node.props.children).toContain('Try Again');
 });
