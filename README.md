@@ -5,3 +5,9 @@ Project Team: [Tim Robinson](https://github.com/TimRobinson1), [Henry Hobhouse](
 
 
 https://www.drinkaware.co.uk/
+
+## Technologies Used
+* JavaScript
+* React-Native
+* Jest
+* Enzyme
